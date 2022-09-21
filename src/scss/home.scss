@@ -99,7 +99,7 @@
 // start PREMIER
 .premier {
 	@include adaptiveValue("padding-top", 75, 40);
-	@include adaptiveValue("padding-bottom", 75, 40);
+	@include adaptiveValue("padding-bottom", 75, 20);
 	// .premier__container
 	&__container {
 	}
@@ -166,8 +166,58 @@
 		}
 	}
 }
-
 // finish PREMIER
+//========================================================================================================================================================
+// start video
+.video {
+	@include adaptiveValue("padding-top", 75,20);
+	@include adaptiveValue("padding-bottom", 75, 40);
+	// .video__container
+	&__container {
+	}
+	// .video__play
+	&__play {
+		img {
+			width: 100%;
+			border-top-left-radius: rem(300);
+		}
+	}
+}
+// finish video
+//========================================================================================================================================================
+//========================================================================================================================================================
+// start description
+.description {
+	@include adaptiveValue("padding-top", 75,40);
+	@include adaptiveValue("padding-bottom", 75, 40);
+	// .description__container
+	&__container {
+	}
+	// .description__body
+	&__body {
+		display: flex;
+		column-gap: rem(60);
+		justify-content: center;
+		@media (max-width:$tablet){
+			flex-wrap: wrap;
+		}
+	}
+	// .description__item
+	&__item {
+		font-size: rem(16);
+		line-height: 120%;
+		flex: 0 1 21.25%;
+		> *:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+		@media (max-width:$tablet){
+			flex: 0 1 80%;
+			width: 100%;
+		}
+	}
+}
+// finish description
+//========================================================================================================================================================
 //========================================================================================================================================================
 // start Forest
 .forest {

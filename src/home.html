@@ -5,12 +5,83 @@
 })
 
 <body>
-	<div id="grad1"></div>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<h1>Linear Gradient - Top to Bottom</h1>
-			<p>This linear gradient starts red at the top, transitioning to yellow at the bottom:</p>
+
+			<section class="page__vision vision">
+				<div class="vision__container">
+					<div class="vision__body">
+						<h1 class="vision__title">The VISION AVTR</h1>
+						<div class="vision__subtitle">Inspered by the future</div>
+						<div class="vision__logo">
+							<img src="@img/vision/logo.svg" alt="logo">
+						</div>
+					</div>
+					<div class="vision__image-ibg">
+						<img src="@img/vision/car.jpg" alt="car">
+					</div>
+				</div>
+			</section>
+
+			<section class="page__concept concept">
+				<div class="concept__container">
+					<div class="concept__content">
+						<div class="concept__title title">CONCEPT</div>
+						<div class="concept__desc">
+							Электромобильность в гармонии с человеком и природой. Экологичная технология органических
+							аккумуляторов и продуманная операционная стратегия концепт-кара VISION AVTR.
+						</div>
+						<div class="concept__image">
+							<img src="@img/concept/01.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__premier premier">
+				<div class="premier__container">
+					<div class="premier__row">
+						<div class="premier__column">
+							<div class="premier__title title">premier</div>
+							<div class="premier__desc">
+								<p>
+									На выставке CES 2020 был представлен новый концептуальный Mercedes-Benz – VISION AVTR. Футуристическая концепция представленного электромобиля объединяет человека, природу и автомобиль уникальным образом. 
+								</p>
+								<p>
+									Ола Каллениус, председатель правления Daimler AG и Mercedes-Benz AG, в своем выступлении представил концепт-кар вместе с лауреатом премии Оскар и создателем фильма Аватар, Джеймсом Кэмероном. 
+								</p>
+								<p>
+									Именно философия, созданная культовым режиссером в фантастическом фильме, стала основой создания VISION AVTR.
+								</p>								
+							</div>
+							<div class="premier__image premier__image_1">
+								<img src="@img/premier/01.jpg" alt="">
+							</div>
+							<div class="premier__title premier__title_bottom title ">MORE</div>
+						</div>
+						<div class="premier__column">
+							<div class="premier__image premier__image_2">
+								<img src="@img/premier/02.jpg" alt="">
+							</div>
+							<div class="premier__desc">
+								<p>
+									«Mercedes-Benz всегда был одним из самых технологичных премиальных брендов. Теперь пришло время объединить роскошь и экологичность. Ведь только так мы сможем соответствовать стандартам будущего».
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="pusto"></div>
+
+			<section class="page__forest forest">
+				<div class="forest__image">
+					<img src="@img/forest/car-forest.jpg" alt="car-forest">
+				</div>
+			</section>
+
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

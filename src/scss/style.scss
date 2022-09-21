@@ -63,14 +63,8 @@ $responsiveType: 1;
 
 // Стили тега BODY ============================================================================================================================================================================================================================================================================================================================================================================================
 body {
-	color: #ffffff;
-	#grad1 {
-		height: 100vh;
-		background-color: #070A1B; /* For browsers that do not support gradients */
-		background-image: linear-gradient(#070A1B, #202658);
-	} 
-	//background: #000;
-	//background: linear-gradient(#070A1B #070A1B);
+	//background-color: #070A1B; 
+	// background-image: linear-gradient(#070A1B, #202658);
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -88,6 +82,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	background-color: #070A1B; 
+	background-image: linear-gradient(#070A1B, #202658);
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;

@@ -3,3 +3,15 @@
 	display: none !important;
 }
 
+.title {
+	font-family: "Corporate A";
+	font-weight: 700;
+	font-size: rem(18);
+	@include adaptiveValue("font-size", 18, 22);
+	line-height: 120%;
+	color: #f402a2;
+	text-transform: uppercase;
+	@media (max-width:$tablet){
+		@include adaptiveValue("font-size", 18, 24);
+	}
+}

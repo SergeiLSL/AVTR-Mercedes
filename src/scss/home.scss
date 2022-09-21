@@ -1,3 +1,208 @@
+.pusto {
+	position: relative;
+	padding-top: rem(30);
+	padding-bottom: rem(30);
+	background-color: #fff;
+}
+//========================================================================================================================================================
+//========================================================================================================================================================
+// start vision
+.vision {
+	position: relative;
+	margin: 0 auto;
+	margin-top: rem(100);
+
+	// .proba__container
+	&__container {
+	}
+	// .proba__body
+	&__body {
+		padding-top: rem(631);
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		bottom: rem(-25);
+	}
+	// .proba__title
+	&__title {
+		font-family: "Corporate A";
+		font-weight: 700;
+		@include adaptiveValue("font-size", 72, 36);
+		line-height: 120%;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		@include adaptiveValue("margin-bottom", 5, 15);
+	}
+	// .proba__subtitle
+	&__subtitle {
+		font-weight: 400;
+		@include adaptiveValue("font-size", 24, 22);
+		line-height: 120%;
+		margin-bottom: rem(24);
+	}
+	// .proba__logo
+	&__logo {
+		img {
+			width: rem(50);
+			height: rem(50);
+		}
+	}
+	// .proba__image-ibg
+	&__image-ibg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		img {
+			border-top-right-radius: rem(400);
+			border-top-left-radius: rem(400);
+		}
+	}
+}
+// finish vision
+//========================================================================================================================================================
+// start concept
+.concept {
+	@include adaptiveValue("padding-top", 75, 40);
+	@include adaptiveValue("padding-bottom", 75, 40);
+
+	// .concept__container
+	&__container {
+		display: flex;
+		justify-content: end;
+	}
+	// .concept__content
+	&__content {
+		max-width: rem(900);
+		//width: 100%;
+	}
+	// .concept__title
+	&__title {
+		margin-bottom: rem(25);
+	}
+	// .concept__desc
+
+	&__desc {
+		font-size: 24px;
+		line-height: 120%;
+		margin-bottom: rem(25);
+	}
+	// .concept__image
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+}
+// finish concept
+//========================================================================================================================================================
+// start PREMIER
+.premier {
+	@include adaptiveValue("padding-top", 75, 40);
+	@include adaptiveValue("padding-bottom", 75, 40);
+	// .premier__container
+	&__container {
+	}
+	// .premier__row
+	&__row {
+		display: flex;
+		column-gap: rem(60);
+		@media (max-width:$tablet){
+			text-align: center;
+			flex-wrap: wrap;
+		}
+	}
+	// .premier__column
+	&__column {
+		//max-width: rem(570);
+		flex: 0 1 50%;
+		> *:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+		@media (max-width:$tablet){
+			flex: 0 1 100%;
+			width: 100%;
+		}
+	}
+	// .premier__title
+	&__title {
+		// .premier__title_bottom
+		&_bottom {
+			border: rem(1) solid #f402a2;
+			padding: rem(14) 0;
+			text-align: center;
+		}
+		@media (max-width:$tablet){
+			margin-bottom: rem(25);
+		}
+	}
+	// .premier__desc
+	&__desc {
+		font-size: 16px;
+		line-height: 120%;
+		& p:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+		@media (max-width:$tablet){
+			@include adaptiveValue("font-size", 18, 22);
+		}
+	}
+	// .premier__image
+	&__image {
+		img {
+			width: 100%;
+		}
+		&_1 {
+			img {
+			@media (max-width:$tablet){
+				margin-bottom: rem(30);
+			}
+		}
+		}
+		&_2 {
+			img {
+			border-top-left-radius: rem(284);
+		}
+		}
+	}
+}
+
+// finish PREMIER
+//========================================================================================================================================================
+// start Forest
+.forest {
+	position: relative;
+	text-align: center;
+	// .forest__image
+	&__image {
+		background-size: cover;
+		img {
+			width: 100%;
+			border-top-right-radius: rem(450);
+			border-top-left-radius: rem(450);
+		}
+	}
+}
+
+// finish Forest
 //====================================================================================================
 
 //====================================================================================================
+// start Forest
+.forest {
+	// 	position: relative;
+	// 	text-align: center;
+	// 	&__image {
+	// 		//max-width: rem(1920);
+	// 	}
+	// 	//design__image
+	// 	&__image-ibg {
+	// 		background-size: cover;
+	// 		border-top-right-radius: rem(450);
+	// 		border-top-left-radius: rem(450);
+	// 		img {
+	// 			width: 100%;
+	// 		}
+	// 	}
+}
+// finish Forest

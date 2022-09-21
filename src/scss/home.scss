@@ -107,7 +107,7 @@
 	&__row {
 		display: flex;
 		column-gap: rem(60);
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			text-align: center;
 			flex-wrap: wrap;
 		}
@@ -119,7 +119,7 @@
 		> *:not(:last-child) {
 			margin-bottom: rem(25);
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex: 0 1 100%;
 			width: 100%;
 		}
@@ -132,7 +132,7 @@
 			padding: rem(14) 0;
 			text-align: center;
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			margin-bottom: rem(25);
 		}
 	}
@@ -143,7 +143,7 @@
 		& p:not(:last-child) {
 			margin-bottom: rem(20);
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			@include adaptiveValue("font-size", 18, 22);
 		}
 	}
@@ -154,15 +154,15 @@
 		}
 		&_1 {
 			img {
-			@media (max-width:$tablet){
-				margin-bottom: rem(30);
+				@media (max-width: $tablet) {
+					margin-bottom: rem(30);
+				}
 			}
-		}
 		}
 		&_2 {
 			img {
-			border-top-left-radius: rem(284);
-		}
+				border-top-left-radius: rem(284);
+			}
 		}
 	}
 }
@@ -170,7 +170,7 @@
 //========================================================================================================================================================
 // start video
 .video {
-	@include adaptiveValue("padding-top", 75,20);
+	@include adaptiveValue("padding-top", 75, 20);
 	@include adaptiveValue("padding-bottom", 75, 40);
 	// .video__container
 	&__container {
@@ -186,9 +186,92 @@
 // finish video
 //========================================================================================================================================================
 //========================================================================================================================================================
+// start INTERIOR
+.interior {
+	@include adaptiveValue("padding-top", 75, 40);
+	@include adaptiveValue("padding-bottom", 75, 40);
+	// .interior__container
+	&__container {
+		margin-bottom: rem(100);
+	}
+	// .interior__body
+	&__body {
+		display: flex;
+		justify-content: space-between;	
+		column-gap: rem(44);
+	}
+	// .interior__column-1
+	&__column-1 {
+		font-size: 16px;
+		line-height: 120%;
+		> *:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+		@media (max-width: $tablet) {
+			flex: 0 1 100%;
+			width: 100%;
+		}
+	}
+	// .interior__title
+	&__title {
+	}
+	// .interior__image
+	&__image {
+		img {
+			margin-bottom: rem(90);
+		}
+
+	}
+	// .interior__content
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+	// .interior__block
+	&__block {
+		flex: 0 1 28%;
+		font-size: 16px;
+		line-height: 120%;
+		> *:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+		@media (max-width: $tablet) {
+			flex: 0 1 100%;
+			width: 100%;
+		}
+	}
+	// .interior__image-salon
+	&__image-salon {
+	}
+	// .interior__slider
+	&__slider {
+		
+	}
+	// .interior__wrapper
+	&__wrapper {
+	}
+	// .interior__slide
+	&__slide {
+		//margin-right: rem(60);
+	}
+}
+
+.title {
+}
+.swiper {
+	margin-right: rem(60);
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+
+// finish INTERIOR
+//========================================================================================================================================================
 // start description
 .description {
-	@include adaptiveValue("padding-top", 75,40);
+	@include adaptiveValue("padding-top", 75, 40);
 	@include adaptiveValue("padding-bottom", 75, 40);
 	// .description__container
 	&__container {
@@ -198,7 +281,7 @@
 		display: flex;
 		column-gap: rem(60);
 		justify-content: center;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex-wrap: wrap;
 		}
 	}
@@ -210,7 +293,7 @@
 		> *:not(:last-child) {
 			margin-bottom: rem(25);
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex: 0 1 80%;
 			width: 100%;
 		}
@@ -228,8 +311,11 @@
 		background-size: cover;
 		img {
 			width: 100%;
-			border-top-right-radius: rem(450);
-			border-top-left-radius: rem(450);
+			// border-top-right-radius: rem(450);
+			// border-top-left-radius: rem(450);
+			border: 1px solid #000000;
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+			border-radius: 450px 450px 0px 0px;
 		}
 	}
 }

@@ -180,10 +180,16 @@
 	}
 	// .clip__video
 	&__video {	
-		position: relative;	
+		position: relative;
+		overflow: hidden;
+		height: 0;
+		padding-bottom: 56.25%;	
 		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-			height: rem(675);
+			height: 100%;
 			object-fit: cover;
 		}
 	}

@@ -82,8 +82,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.image-slider__button-next',
-				nextEl: '.image-slider__button-prev',
+				prevEl: '.control-image-slider__arrow-next',
+				nextEl: '.control-image-slider__arrow-prev',
 			},
 
 			// Брейкпоинты

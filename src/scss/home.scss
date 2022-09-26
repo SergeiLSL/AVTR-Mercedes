@@ -220,9 +220,6 @@
 	// .interior__container
 	&__container {
 		margin-bottom: rem(100);
-		@media (max-width: $tablet) {
-			margin-bottom: rem(40);
-		}
 	}
 	// .interior__body
 	&__body {
@@ -347,6 +344,7 @@
 	}
 	// .interior__wrapper
 	&__wrapper {
+		position: relative;
 	}
 	// .interior__slide
 	&__slide {
@@ -360,18 +358,9 @@
 	}
 }
 
-.title {
-}
-.swiper {
-	//margin-right: rem(60);
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-
 .image-slider {
 	padding: rem(30) 0 rem(70) 0;
+	position: relative;
 	// .image-slider__wrapper
 	&__wrapper {
 	}
@@ -386,42 +375,48 @@
 			max-width: rem(450);
 			height: rem(280);
 			object-fit: cover;
+			padding-bottom: rem(25);
 		}
 	}
-	// .image-slider__button-prev
-	&__button-prev {
-		&::after {
-			color: #f402a2;
-			//font-size: rem(150);
-		}
+	// .image-slider__control
+	&__control {
+		position: absolute;
+		width: rem(160);
+		left: 50%;
+		top: -5%;
+		transform: translate(-50%, 5%);
+		display: flex;	
+		justify-content: space-between;
+		z-index: 50;
 	}
-	// .image-slider__button-next
-	&__button-next {
-		&::after {
-			color: #f402a2;
-		}
-	}
-	& .swiper-button-prev {
-		//color: yellow;
-		//font-size: rem(20);
-	}
-	
 }
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
+//===++++++++++++++++++++++++++++++
 
-.image-slider .swiper-button-prev::after {
-	//color: green;
-	//font-size: rem(50);
-}
-.image-slider .swiper-button-next,
-.image-slider .swiper-button-prev {
-	position: absolute;
-	top: 80%;	
+.control-image-slider {
+	position: relative;
+	z-index: 50;
+	display: flex;	
+	justify-content: space-between;
+	// .control-image-slider__arrow
+	&__arrow {
+		cursor: pointer;
+		padding: rem(10) 0;
+		//position: absolute;
+		z-index: 2;
+		color: #f402a2;
+		width: rem(50);
+		height: rem(20);
+		//align-items: center;
+		//justify-content: center;	
+	}
+	// .control-image-slider__arrow-next
+	&__arrow-next {
+		background: url('@img/slider/arrow-1.png') 0 0 no-repeat;
+	}
+	// .control-image-slider__arrow--prev
+	&__arrow-prev {
+		background: url('@img/slider/arrow-2.png') 0 0 no-repeat;
+	}
 }
 
 // finish INTERIOR
@@ -461,6 +456,7 @@
 //========================================================================================================================================================
 // start Forest
 .forest {
+	@include adaptiveValue("padding-top", 75, 20);
 	position: relative;
 	text-align: center;
 	// .forest__image

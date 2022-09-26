@@ -17,7 +17,7 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import "../../scss/base/swiper.scss";
+//import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
 import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
@@ -27,22 +27,31 @@ import "../../scss/libs/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.image-slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.image-slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 4,
-			spaceBetween: 0,
+			spaceBetween: 0,                                                                        
 			autoHeight: true,
 			speed: 800,
-
-			//touchRatio: 0,
+			// Включение/ отключение перетаскивания на ПК
+			simulateTouch: true,
+			// чувствиткльность свайпа
+			touchRatio: 1,
+			// Угол србатывания свайпа/перетаскивания
+			touchAngle: 45,
+			// курсор перетаскивания
+			grabCursor: true, 
 			//simulateTouch: false,
 			loop: true,
+			// переключени при клике на слайд
+			slideToClickedSlide: true,
+
 			//preloadImages: false,
 			//lazy: true,
 
@@ -73,12 +82,12 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.image-slider__button-next',
+				nextEl: '.image-slider__button-prev',
 			},
 
 			// Брейкпоинты
-			/*
+
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
@@ -98,7 +107,7 @@ function initSliders() {
 					spaceBetween: 30,
 				},
 			},
-			*/
+	
 			// События
 			on: {
 

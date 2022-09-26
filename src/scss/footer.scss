@@ -39,7 +39,6 @@
 	// .footer__social
 	&__social {
 		display: flex;
-		//column-gap: rem(30);
 		@include adaptiveValue("column-gap", 30, 10);
 		justify-content: center;
 		align-items: center;	

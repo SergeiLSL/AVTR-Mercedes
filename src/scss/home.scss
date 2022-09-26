@@ -1,17 +1,9 @@
-.pusto {
-	position: relative;
-	padding-top: rem(30);
-	padding-bottom: rem(30);
-	background-color: #fff;
-}
 //========================================================================================================================================================
 //========================================================================================================================================================
 // start vision
 .vision {
 	position: relative;
 	margin: 0 auto;
-	margin-top: rem(100);
-
 	// .proba__container
 	&__container {
 	}
@@ -126,11 +118,19 @@
 	}
 	// .premier__title
 	&__title {
+		transition: all 0.5s ease;
+		&:hover {
+			color: #53a1cb;
+			border: rem(1) solid #53a1cb;
+		}
 		// .premier__title_bottom
 		&_bottom {
 			border: rem(1) solid #f402a2;
 			padding: rem(14) 0;
+			display: flex;
 			text-align: center;
+			justify-content: center;
+			// cursor: pointer; //????????????
 		}
 		@media (max-width: $tablet) {
 			margin-bottom: rem(25);
@@ -179,11 +179,12 @@
 		//position: relative;
 	}
 	// .clip__video
-	&__video {	
+	&__video {
 		position: relative;
 		overflow: hidden;
 		height: 0;
-		padding-bottom: 56.25%;	
+		padding-bottom: 56.25%;
+		margin-bottom: rem(25);
 		iframe {
 			position: absolute;
 			top: 0;
@@ -191,6 +192,20 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+	}
+	// .clip__title
+	&__title {
+		padding-top: rem(12);
+		padding-bottom: rem(13);
+		border: rem(1) solid #f402a2;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		transition: all 0.5s ease;
+		&:hover {
+			color: #53a1cb;
+			border: rem(1) solid #53a1cb;
 		}
 	}
 }
@@ -263,10 +278,14 @@
 	// .interior__image
 	&__image {
 		img {
-			margin-bottom: rem(94);
+			//margin-bottom: rem(94);
+			@include adaptiveValue("margin-bottom", 94, 20);
 			width: 100%;
 			max-height: rem(450);
 			height: 100%;
+			@media (max-width: rem(1200)) {
+				margin-bottom: rem(70);
+			}
 			@media (max-width: $tablet) {
 				margin-bottom: rem(30);
 			}
@@ -331,18 +350,78 @@
 	}
 	// .interior__slide
 	&__slide {
-		//margin-right: rem(60);
+		img {
+			//margin: 0 rem(30);
+			//max-width: rem(450);
+			//height: 45%;
+			//width: 100%;
+			//height: 100%;
+		}
 	}
 }
 
 .title {
 }
 .swiper {
-	margin-right: rem(60);
+	//margin-right: rem(60);
 }
 .swiper-wrapper {
 }
 .swiper-slide {
+}
+
+.image-slider {
+	padding: rem(30) 0 rem(70) 0;
+	// .image-slider__wrapper
+	&__wrapper {
+	}
+	// .image-slider__slide
+	&__slide {
+	}
+	// .image-slider__image
+	&__image {
+		text-align: center;
+		img {
+			width: 100%;
+			max-width: rem(450);
+			height: rem(280);
+			object-fit: cover;
+		}
+	}
+	// .image-slider__button-prev
+	&__button-prev {
+		&::after {
+			color: #f402a2;
+			//font-size: rem(150);
+		}
+	}
+	// .image-slider__button-next
+	&__button-next {
+		&::after {
+			color: #f402a2;
+		}
+	}
+	& .swiper-button-prev {
+		//color: yellow;
+		//font-size: rem(20);
+	}
+	
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+.image-slider .swiper-button-prev::after {
+	//color: green;
+	//font-size: rem(50);
+}
+.image-slider .swiper-button-next,
+.image-slider .swiper-button-prev {
+	position: absolute;
+	top: 80%;	
 }
 
 // finish INTERIOR

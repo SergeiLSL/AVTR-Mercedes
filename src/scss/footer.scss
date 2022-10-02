@@ -16,16 +16,14 @@
 		align-items: center;
 		//justify-content: center;
 		@media (max-width:$mobile){
-			display: block;
+			display: flex;
+			flex-direction:column-reverse;
 			text-align: center;
 		}
 	}
 	// .footer__copirait
 	&__copirait {
 		line-height: 120%;
-		@media (max-width:$mobile){
-			margin-bottom: rem(15);
-		}
 	}
 	// .footer__logo
 	&__logo {
@@ -33,7 +31,8 @@
 		height: rem(33);
 		@media (max-width:$mobile){
 			margin: 0 auto;
-			margin-bottom: rem(15);
+			margin-bottom: rem(25);
+			margin-top: rem(15);
 		}
 	}
 	// .footer__social

@@ -4,10 +4,10 @@
 .vision {
 	position: relative;
 	margin: 0 auto;
-	// .proba__container
+	// .vision__container
 	&__container {
 	}
-	// .proba__body
+	// .vision__body
 	&__body {
 		padding-top: rem(631);
 		position: relative;
@@ -15,7 +15,7 @@
 		text-align: center;
 		bottom: rem(-25);
 	}
-	// .proba__title
+	// .vision__title
 	&__title {
 		font-family: "Corporate A";
 		font-weight: 700;
@@ -24,27 +24,30 @@
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		@include adaptiveValue("margin-bottom", 5, 15);
 	}
-	// .proba__subtitle
+	// .vision__subtitle
 	&__subtitle {
 		font-weight: 400;
 		@include adaptiveValue("font-size", 24, 22);
 		line-height: 120%;
 		margin-bottom: rem(24);
 	}
-	// .proba__logo
+	// .vision__logo
 	&__logo {
 		img {
 			width: rem(50);
 			height: rem(50);
 		}
 	}
-	// .proba__image-ibg
+	// .vision__image-ibg
 	&__image-ibg {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
+		background-repeat: no-repeat;
+		background-position: center;
+		background: cover;
 		img {
 			border-top-right-radius: rem(400);
 			border-top-left-radius: rem(400);
@@ -133,7 +136,8 @@
 			// cursor: pointer; //????????????
 		}
 		@media (max-width: $tablet) {
-			margin-bottom: rem(25);
+			margin-bottom: rem(60);
+
 		}
 	}
 	// .premier__desc
@@ -154,9 +158,6 @@
 		}
 		&_1 {
 			img {
-				@media (max-width: $tablet) {
-					margin-bottom: rem(30);
-				}
 			}
 		}
 		&_2 {
@@ -379,7 +380,7 @@
 		left: 50%;
 		top: -5%;
 		transform: translate(-50%, 5%);
-		display: flex;	
+		display: flex;
 		justify-content: space-between;
 		z-index: 50;
 	}
@@ -389,7 +390,7 @@
 .control-image-slider {
 	position: relative;
 	z-index: 50;
-	display: flex;	
+	display: flex;
 	justify-content: space-between;
 	// .control-image-slider__arrow
 	&__arrow {
@@ -401,11 +402,11 @@
 	}
 	// .control-image-slider__arrow-next
 	&__arrow-next {
-		background: url('@img/slider/arrow-1.png') 0 0 no-repeat;
+		background: url("@img/slider/arrow-1.png") 0 0 no-repeat;
 	}
 	// .control-image-slider__arrow--prev
 	&__arrow-prev {
-		background: url('@img/slider/arrow-2.png') 0 0 no-repeat;
+		background: url("@img/slider/arrow-2.png") 0 0 no-repeat;
 	}
 }
 
@@ -457,6 +458,23 @@
 			border: 1px solid #000000;
 			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 			border-radius: 450px 450px 0px 0px;
+		}
+	}
+	// .vision__image-ibg
+	&__image-ibg {
+		// min-height: rem(900);
+		padding-bottom: 46.88%;
+		// position: absolute;
+		// width: 100%;
+		// height: 100%;
+		// top: 0;
+		// left: 0;
+		// background-repeat: no-repeat;
+		// background-position: center;
+		// background-size: contain;
+		img {
+			border-top-right-radius: rem(450);
+			border-top-left-radius: rem(450);
 		}
 	}
 }
